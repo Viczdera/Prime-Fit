@@ -3,6 +3,22 @@ body {
   background-color: #E7E9FA;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
-
+.my-grid {
+  width: 100%;
+}
+.counter-p {
+  position: relative;
+}
+.counter {
+  position: absolute;
+  font-size: 0.44rem;
+  background-color: #FFD81B;
+  border-radius: 50%;
+  color: #110E11;
+  top: -0.5rem;
+  right: -0.3rem;
+  padding: 0.2rem;
+}
 /*# sourceMappingURL=style.css.map */

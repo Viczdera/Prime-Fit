@@ -11,4 +11,21 @@ body{
     background-color: $blue;
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+.my-grid{
+    width: 100%;
+}
+.counter-p{
+    position: relative;
+}
+.counter{
+    position: absolute;
+    font-size: 0.44rem;
+    background-color: $yellow;
+    border-radius: 50%;
+    color: $black;
+    top: -0.5rem;
+    right: -0.3rem;
+    padding: 0.2rem;
 }
