@@ -13,15 +13,105 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/114f48210b.js" crossorigin="anonymous"></script>
 </head>
-<body>
 
-    <header>
+<body id="body">
 
+    <header class="bg-white">
+        <nav class="container-lg d-flex justify-content-between pt-4 pb-3">
+            <a href="">
+              <img src="http://cdn.onlinewebfonts.com/svg/img_258190.png" alt="" class="img-fluid" width="25px" height="25px">
+            </a>
+            <h3 class="brand-name">Prime-Fit</h3>
+            <div class="nav-icon">
+                <i class="fa-solid fa-cart-shopping mx-2 counter-p"><p class="counter">0</p></i>
+                <i class="fa-solid fa-magnifying-glass mx-2 "></i>
+            </div>
+        </nav>
     </header>
-    <main class="container-lg">
-        <section>
-
+    <main>
+        <section class="container-lg sect1">
+            <div class="productsCont row">
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+            </div>
         </section>
+        <div class="roundedBtn" onclick="showCart()">
+            <button class="flex-center" id="cartBtnMobile">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cartCount flex-center">
+                    10
+                </span>
+            </button>
+
+        </div>
+        <div class="cartModal" id="cartModal">
+            <div>
+                <div class="closeCartCont">
+                    <span class="closeCart" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="container-sm cartItemsCont">
+                    <h2>Cart</h2>
+                    <div class="cartBody">
+
+                    </div>
+                </div>
+                <div class="cartFooterCont">
+                    <div class="cartFooter container-sm">
+                        <div class="totalCont">
+                            <ul>
+                                <li>
+                                    <span>Delivery</span>
+                                    <span class="totalAmt"> 1000</span>
+                                </li>
+                                <li>
+                                    <span>Discount</span>
+                                    <span class="totalAmt"> 500</span>
+                                </li>
+    
+                            </ul>
+                            <div class="divider"></div>
+                            <div class="total">
+                                <span>Total</span>
+                                <span class="totalAmt"> 144,423</span>
+                            </div>
+                        </div>
+                        <button class="checkoutBtn">
+                            CHECKOUT 
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
     </main>
 
 
