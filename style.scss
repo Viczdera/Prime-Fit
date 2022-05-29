@@ -29,3 +29,51 @@ body{
     right: -0.3rem;
     padding: 0.2rem;
 }
+.discount{
+    text-decoration: line-through;
+}
+.cart-button{
+    height: 2rem;
+    
+}
+.card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cart-overley{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 1;
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20% auto;
+    width: 70%;
+    padding: 2rem ;
+    // height: 100vh;
+    background-color: red;
+}
+#close-cart{
+    margin-left: auto;
+    color: $grey;
+    z-index: 10;
+    width: 100%;
+}
+.cart-overley img{
+    width: 100px;
+    height: 100px;
+}
+.cart-overley input{
+    width: 20px;
+}
+.cart-overley input::-webkit-outer-spin-button,
+.cart-overley input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

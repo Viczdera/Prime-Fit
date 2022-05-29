@@ -5,12 +5,15 @@ body {
   padding: 0;
   width: 100%;
 }
+
 .my-grid {
   width: 100%;
 }
+
 .counter-p {
   position: relative;
 }
+
 .counter {
   position: absolute;
   font-size: 0.44rem;
@@ -20,5 +23,67 @@ body {
   top: -0.5rem;
   right: -0.3rem;
   padding: 0.2rem;
+}
+
+.discount {
+  text-decoration: line-through;
+}
+
+.cart-button {
+  height: 2rem;
+}
+
+.card {
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cart-overley {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20% auto;
+  width: 70%;
+  padding: 2rem;
+  background-color: red;
+}
+
+#close-cart {
+  margin-left: auto;
+  color: #818383;
+  z-index: 10;
+  width: 100%;
+}
+
+.cart-overley img {
+  width: 100px;
+  height: 100px;
+}
+
+.cart-overley input {
+  width: 20px;
+}
+
+.cart-overley input::-webkit-outer-spin-button,
+.cart-overley input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
