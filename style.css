@@ -6,6 +6,26 @@
 body {
   background-color: #eff2fc;
   position: relative;
+  width: 100%;
+}
+
+.my-grid {
+  width: 100%;
+}
+
+.counter-p {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  font-size: 0.44rem;
+  background-color: #ffd81b;
+  border-radius: 50%;
+  color: #110e11;
+  top: -0.5rem;
+  right: -0.3rem;
+  padding: 0.2rem;
 }
 
 ul {
