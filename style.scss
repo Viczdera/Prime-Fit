@@ -19,7 +19,42 @@ body {
 
   width: 100%;
 }
-
+// finix added item
+.all{
+  line-height: 12px;
+  font-size: 16px;
+  position: relative;
+  img{
+    object-fit: contain;
+    height: 150px;
+    width: 100%;
+    // background-color: RED;
+    
+  }
+ 
+  .discount{
+    text-decoration: line-through;
+    font-size: 14px;
+    color: $grey;
+  }
+  .cart-add{
+    border-radius: 0.3rem;
+    background-color: $yellow;
+    padding: 0.5rem;
+    box-shadow: $boxShadow2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .cart-add:hover{
+    background-color: #c7ab22;
+  }
+}
+.cart-img{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
 ul {
   padding: 0;
 }
@@ -87,7 +122,7 @@ button {
     padding: 10px;
     .product {
       width: 50%;
-      height: 150px;
+    //   height: 150px;
       min-width: 150px;
       background-color: #fff;
       display: flex;

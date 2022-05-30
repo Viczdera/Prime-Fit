@@ -9,6 +9,47 @@ body {
   width: 100%;
 }
 
+.all {
+  line-height: 12px;
+  font-size: 16px;
+  position: relative;
+}
+
+.all img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
+  width: 100%;
+}
+
+.all .discount {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #818383;
+}
+
+.all .cart-add {
+  border-radius: 0.3rem;
+  background-color: #ffd81b;
+  padding: 0.5rem;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.all .cart-add:hover {
+  background-color: #c7ab22;
+}
+
+.cart-img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 ul {
   padding: 0;
 }
@@ -19,14 +60,24 @@ button {
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .justify-sb {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .fw-600 {
@@ -80,21 +131,31 @@ button {
 .sect1 .productsCont {
   padding: 10px;
 }
+
 .sect1 .productsCont .product {
   width: 50%;
-  height: 150px;
   min-width: 150px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
   margin: 10px;
   border-radius: 8px;
-  box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
+  -webkit-box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
+          box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
 }
+
 .sect1 .productsCont .product:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .roundedBtn {
@@ -105,6 +166,7 @@ button {
   background-color: #110e11;
   border-radius: 50%;
 }
+
 .roundedBtn button {
   position: relative;
   width: 20px;
@@ -114,6 +176,7 @@ button {
   padding: 0;
   color: #fff;
 }
+
 .roundedBtn button span {
   position: absolute;
   right: -8px;
@@ -135,8 +198,9 @@ button {
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.662745098);
+  background: #ffffffa9;
 }
+
 .cartModal > div {
   position: fixed;
   padding: 20px;
@@ -146,11 +210,14 @@ button {
   height: 92vh;
   background: #eff2fc;
   color: #110e11;
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(209, 213, 219, 0.678) 0px 0px 0px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(209, 213, 219, 0.678) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(209, 213, 219, 0.678) 0px 0px 0px 1px inset;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
+
 .cartModal > div .closeCartCont {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -158,6 +225,7 @@ button {
   height: 40px;
   background: #eff2fc;
 }
+
 .cartModal > div .closeCartCont .closeCart {
   position: absolute;
   cursor: pointer;
@@ -168,39 +236,55 @@ button {
   font-size: 22px;
   font-weight: 600;
 }
+
 .cartModal .cartItemsCont {
   height: 80%;
   position: relative;
   overflow-y: scroll;
 }
+
 .cartModal .cartItemsCont > h2 {
   font-size: 32px;
 }
+
 .cartModal .cartItemsCont .cartBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
+
 .cartModal .cartItemsCont .cartBody .cartItems,
 .cartModal .cartItemsCont .cartBody .summary {
   background: white;
   border-radius: 8px;
 }
+
 .cartModal .cartItemsCont .cartBody .cartItems {
   width: 100%;
 }
+
 .cartModal .cartItemsCont .cartBody .cartItems ul li {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+          box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
+
 .cartModal .cartItemsCont .cartBody .summary {
   display: none;
   width: 40%;
   height: 300px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 .cartModal .cartFooterCont {
   position: absolute;
   width: 100%;
@@ -209,19 +293,23 @@ button {
   padding: 0px 20px;
   background-color: #eff2fc;
 }
+
 .cartModal .totalCont {
   padding-top: 20px;
 }
+
 .cartModal .divider {
   width: 100%;
   height: 1px;
   background-color: #818383;
   margin: 10px 0px;
 }
+
 .cartModal .total .totalAmt {
   font-size: 18px;
   font-weight: bold;
 }
+
 .cartModal .checkoutBtn {
   margin-top: 20px;
   background-color: #110e11;
@@ -239,20 +327,18 @@ button {
     max-width: calc(33.3% - 20px) !important;
   }
 }
+
 @media (min-width: 768px) {
   .roundedBtn {
     display: none;
   }
-
   .counter-p {
     position: relative;
     display: inline-block !important;
   }
-
   .cartModal > div {
     overflow-y: scroll;
   }
-
   .cartBody {
     min-height: 80% !important;
   }
@@ -261,13 +347,15 @@ button {
     min-height: 80%;
   }
   .cartBody .summary {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
-
   .cartFooterCont {
     display: none !important;
   }
 }
+
 @media only screen and (min-width: 992px) {
   .product {
     width: 25% !important;
@@ -275,5 +363,4 @@ button {
     max-width: calc(25% - 20px) !important;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -1,167 +1,98 @@
 const cartModal = document.getElementById("cartModal");
 const cartBtnMobile = document.getElementById("cartBtnMobile");
+
+const myProduct = document.querySelector(".myProduct")
+
+//array of products
+const products = [
+  {
+    image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+    name: 'Nike MercurialX',
+    seller: "Amazon",
+    price: '$30.3',
+    dPrice: "$40"
+},
+  {
+    image: "https://i.pinimg.com/564x/f8/9f/41/f89f41a486e5def128e3f51183c1730a.jpg",
+    name: 'Lapel mens top',
+    seller: "Amazon",
+    price: '$30.3',
+    dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/564x/78/fe/ca/78feca65081a02f73d2284cb8fc11c5f.jpg",
+  name: 'Beach shirt',
+  seller: "Amazon",
+  price: '$30',
+  dPrice: '$40',
+},
+{
+  image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+{ image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+name: 'Nike MercurialX',
+seller: "Amazon",
+price: '$30.3',
+dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/474x/58/08/1a/58081a370f9874cde1f64fb81054f08e.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+{
+  image: "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
+  name: 'Nike MercurialX',
+  seller: "Amazon",
+  price: '$30.3',
+  dPrice: "$40"
+},
+];
+// mappng product
+window.onload = () =>{
+
+   products.map(function(product, i){
+    myProduct.innerHTML += ` <div class="col product myProduct"><div class="all"><img src="${product.image}" alt="" height="150px" width="100%" style="object-fit:contain ;"> <div class="img-info"> <h5>${product.name}</h5> <h6>${product.price}</h6><h6 class="discount">${product.dPrice}</h6> </div> <button class="cart-add" onclick=addToCart(${i})>Add to cart</button></div></div>`
+  })
+ 
+}
+  
 const cartCount0 = document.getElementById("cartCount0");
 const cartCount1 = document.getElementById("cartCount1");
 const productContainer = document.getElementById("productsCont");
 const cartItemsContainer = document.getElementById("cartItemsUl");
 //array of products
-const products = [
-  {
-    id: "1",
-    name: "Distress Tee",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "2",
-    name: "Distress Jeans",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "3",
-    name: "Distress Tops",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "4",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "5",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "6",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "7",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "8",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "9",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "10",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "11",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "12",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "13",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "14",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "15",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "16",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-  {
-    id: "17",
-    name: "Distress Tees",
-    price: "₦20,000",
-    seller: "MAK-OFFICIAL",
-    image:
-      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220521_095243_0_360x.jpg?v=1653125271",
-  },
-];
+
 const cartItems = [];
 console.log(products);
 
-//show products
-function showProducts() {
-  productContainer.innerHTML = "";
-  products.forEach((product, i) => {
-    const productCard = document.createElement("div");
-    productCard.setAttribute("class", "col product");
-    productCard.innerHTML =
-      "<div>" +
-      product.name +
-      " <button onclick='addToCart(" +
-      i +
-      ")'>Add</button></div>";
-    productContainer.appendChild(productCard);
-  });
-}
-showProducts();
 showCartItems();
 console.log(cartItems);
 //add to cart
@@ -182,14 +113,19 @@ function addToCart(i) {
     
      
 }
+// mine own
+
 
 //showCartItems
-function showCartItems() {
+ function showCartItems() {
+  // cartItems.forEach(function(product,i){
+  //   cartItemsContainer.innerHTML += `<li> <div class="cartImgCont"> <img alt="productimg" class="cart-img" src="${product.image}"/> </div><div><h6>${product.name}</h6><p>${product.seller}</p></div> <div> <p>${product.price}</p> <span onclick='removeFromCart(${i})')><i class='fa-solid fa-trash'></i></span></div> </li>`
+  // })
   cartItemsContainer.innerHTML = "";
   cartItems.forEach((product, i) => {
     const cartItem = document.createElement("li");
     cartItem.innerHTML =
-      " <div class='cartImgCont'><img alt='productimg' /></div><div><h6>" +
+      " <div class='cartImgCont'><img  class='cart-img' alt='productimg' src='"+ product.image +"' /></div><div><h6>" +
       product.name +
       " </h6><p>" +
       product.seller +
