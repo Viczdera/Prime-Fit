@@ -40,9 +40,11 @@ body {
   .cart-add{
     border-radius: 0.3rem;
     background-color: $yellow;
+    font-size: 12px;
     padding: 0.5rem;
     box-shadow: $boxShadow2;
     position: absolute;
+    font-weight: 600;
     bottom: 0;
     right: 0;
   }
@@ -135,7 +137,7 @@ button {
 //first section
 .sect1 {
   .productsCont {
-    padding: 10px;
+    padding: 15px;
     .product {
       width: 50%;
     //   height: 150px;
@@ -145,11 +147,14 @@ button {
       flex-direction: column;
       justify-content: space-between;
       padding: 10px;
-      margin: 10px;
+      margin: 5px;
       border-radius: 8px;
       box-shadow: $boxShadow1;
       &:hover {
         box-shadow: $boxShadow3;
+      }
+      .price{
+        margin-bottom: 0px;
       }
     }
   }
@@ -235,6 +240,7 @@ button {
     .cartBody {
       display: flex;
       position: relative;
+      overflow-y: scroll;
       .cartItems,
       .summary {
         background: white;
@@ -243,6 +249,7 @@ button {
       .cartItems {
         width: 100%;
         position: relative;
+        min-height: 400px;
         ul li {
           padding: 20px;
           display: flex;
@@ -256,6 +263,10 @@ button {
         height: 300px;
         position: sticky;
         top: 0;
+      }
+      .cartEmpty{
+        text-align: center;
+        margin-top: 50px;
       }
     }
   }
@@ -301,8 +312,8 @@ button {
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
   .product {
     width: 33.3% !important;
-    min-width: calc(33.3% - 20px) !important;
-    max-width: calc(33.3% - 20px) !important;
+    min-width: calc(33.3% - 10px) !important;
+    max-width: calc(33.3% - 10px) !important;
   }
 }
 @media (min-width: 768px) {
@@ -322,7 +333,9 @@ button {
       overflow-y: scroll;
     }
   }
+  
   .cartBody {
+    overflow-y:unset !important;
     min-height: 80% !important;
     .cartItems {
       margin-right: 20px;
@@ -340,8 +353,8 @@ button {
 @media only screen and (min-width: 992px) {
   .product {
     width: 25% !important;
-    min-width: calc(25% - 20px) !important;
-    max-width: calc(25% - 20px) !important;
+    min-width: calc(25% - 10px) !important;
+    max-width: calc(25% - 10px) !important;
   }
 }
 @media only screen and (min-width: 1200px) {
