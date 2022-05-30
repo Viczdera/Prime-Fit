@@ -201,16 +201,6 @@ secondclearitem.addEventListener("click",removeAll)
 function removeAll(){
   var itemlength= cartItems.length
   cartItems.splice(0,itemlength)
-  cartCount0.innerText = 0;
-  cartCount1.innerText = 0;
-  cartItemsContainer.innerHTML = ""
-  subTotalCont0.innerHTML = 0
-  subTotalCont1.innerHTML = 0
-  deliveryCont0.innerHTML = 0
-  deliveryCont1.innerHTML = 0
-  totalAmt0.innerHTML = 0
-  totalAmt1.innerHTML = 0
-  discountCont0.innerHTML = 0
- discountCont1.innerHTML = 0
+  showCartItems()
 }
 
