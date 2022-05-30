@@ -15,81 +15,113 @@ const products = [
   {
     image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/tomanniofficial_20220301_222623_0_360x.jpg?v=1646171575",
     name: 'Madussa',
-    seller: "Amazon",
-    price: "3900",
-    dPrice: "4000",
+    seller: "Jeanspiration",
+    price: "30000"
   },
   {
     image:
       "https://i.pinimg.com/564x/f8/9f/41/f89f41a486e5def128e3f51183c1730a.jpg",
     name: "Lapel mens top",
     seller: "Amazon",
-    price: "3000",
-    dPrice: "4500",
+    price: "10500"
   },
   {
     image:
       "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
     name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "5800",
-    dPrice: "7000",
+    seller: "Nike",
+    price: "35000"
   },
   {
     image:
       "https://i.pinimg.com/564x/78/fe/ca/78feca65081a02f73d2284cb8fc11c5f.jpg",
     name: "Beach shirt",
-    seller: "Amazon",
-    price: "30",
-    dPrice: "40",
-  },
+    seller: "Dave Stores",
+    price: "12000" },
   {
     image:
       "https://cdn.shopify.com/s/files/1/0530/2907/7190/files/primeriesng_20220221_012954_0_360x.jpg?v=1645403552",
-    name: "Nike MercurialX",
-    seller: "Amazon",
+    name: "Loner's Taut Bag",
+    seller: "Loner's Party",
     price: "15800",
-    dPrice: "20000",
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220309_115533_0_540x.jpg?v=1646823561",
+    name: "There will be Heaven",
+    seller: "Nine",
+    price: "12000"
   },
   {
     image:
       "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
     name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "4800",
-    dPrice: "7000",
+    seller: "Nike",
+    price: "35000"
   },
   {
     image:
-      "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
-    name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "6000",
-    dPrice: "6800",
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/tomanniofficial_20220304_232905_0_540x.jpg?v=1646434127",
+    name: "Free Minds",
+    seller: "Tomanni",
+    price: "18000"
   },
   {
     image:
-      "https://i.pinimg.com/474x/58/08/1a/58081a370f9874cde1f64fb81054f08e.jpg",
-    name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "3000",
-    dPrice: "5700",
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/Picsart_22-05-17_23-30-54-973_720x.jpg?v=1652827296",
+    name: "Epiphany Hoodies",
+    seller: "Revelation",
+    price: "20000"
   },
   {
     image:
-      "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
-    name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "4900",
-    dPrice: "5000",
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/manacquiredknowledge_20220221_151911_0_360x.jpg?v=1645479657",
+    name: "Crucifix Denim",
+    seller: "MAK",
+    price: "21000"
   },
   {
     image:
-      "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
-    name: "Nike MercurialX",
-    seller: "Amazon",
-    price: "1200",
-    dPrice: "3000",
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/IMG_20220303_221738_725_540x.jpg?v=1646342890",
+    name: "Grande Fit Jacket",
+    seller: "Toxic Society",
+    price: "25000"
+  },
+
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/primeriesng_20220419_005715_1_360x.jpg?v=1650326684",
+    name: "Bridges Denim",
+    seller: "MAK",
+    price: "22000"
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/IMG_20220406_182425_151_6c5bf4a6-98b2-4c44-841a-3bf9a122a73e_360x.webp?v=1649273028",
+    name: "Salvation Jacket",
+    seller: "Salvation",
+    price: "24000"
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/Picsart_22-05-17_23-30-22-176_540x.jpg?v=1652827090",
+    name: "Epiphany Tees",
+    seller: "Revelation",
+    price: "12000"
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/IMG_20220513_212925_460_540x.jpg?v=1652476146",
+    name: "Representing Society",
+    seller: "Toxic Society",
+    price: "15000"
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/image_4f613565-4106-42e1-b25f-f09e26c1339b_360x.jpg?v=1650262045",
+    name: "Salvation Pants",
+    seller: "Salvation",
+    price: "22000"
   },
 ];
 
@@ -98,7 +130,7 @@ window.onload = () => {
   products.map(function (product, i) {
     var price = parseFloat(product.price)
     var localPrice = price.toLocaleString()
-    myProduct.innerHTML += ` <div class="col product myProduct"><div class="all"><img src="${product.image}" alt="" height="150px" width="100%" style="object-fit:contain ;"> <div class="img-info"> <h5>${product.name}</h5> <h6>${product.seller}</h6><h6>₦${localPrice}</h6><h6 class="discount">${product.dPrice}</h6> </div> <button class="cart-add" onclick=addToCart(${i})>Add to cart</button></div></div>`;
+    myProduct.innerHTML += ` <div class="col product myProduct"><div class="all"><img src="${product.image}" alt="" height="150px" width="100%" style="object-fit:contain ;"> <div class="img-info"> <h5>${product.name}</h5> <h6>${product.seller}</h6><h6 class='price'>₦${localPrice}</h6> </div> <button class="cart-add" onclick=addToCart(${i})>Add to cart</button></div></div>`;
   });
 };
 
@@ -108,7 +140,7 @@ const productContainer = document.getElementById("productsCont");
 const cartItemsContainer = document.getElementById("cartItemsUl");
 //array of products
 
-const cartItems = [];
+const cartItems =JSON.parse(localStorage.getItem("cart")) || [];
 console.log(products);
 
 showCartItems();
@@ -123,6 +155,9 @@ function addToCart(i) {
 //showCartItems
 function showCartItems() {
   cartItemsContainer.innerHTML = "";
+  if (cartItems.length==0){
+    cartItemsContainer.innerHTML="<h5 class='cartEmpty'>Nothing In Cart</h5>"
+  }
   cartItems.forEach((product, i) => {
     const cartItem = document.createElement("li");
     var price=parseFloat(product.price)
@@ -148,15 +183,19 @@ function showCartItems() {
     cartCount0.innerText = cartItems.length;
     cartCount1.innerText = cartItems.length;
   }
-
+  window.localStorage.setItem('cart',JSON.stringify(cartItems))
   getCartTotal();
 }
 //
 function getCartTotal() {
-  var deliveryFee = 1000;
+  var deliveryFee =1000;
+  var discount = 500;
+  if (cartItems.length==0){
+    deliveryFee=0
+    discount=0
+  }
   deliveryCont0.innerText = `₦${deliveryFee.toLocaleString()}`;
   deliveryCont1.innerText = `₦${deliveryFee.toLocaleString()}`;
-  var discount = 500;
   discountCont0.innerText = `₦${discount.toLocaleString()}`;
   discountCont1.innerText = `₦${discount.toLocaleString()}`;
   function cartItemsPrice() {
