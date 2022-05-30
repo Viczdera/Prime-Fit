@@ -16,29 +16,9 @@ $boxShadow3: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
 body {
   background-color: $blue;
   position: relative;
-  
+
   width: 100%;
 }
-
-//finix nav
-.my-grid{
-  width: 100%;
-}
-.counter-p{
-  position: relative;
-}
-.counter{
-  position: absolute;
-  font-size: 0.44rem;
-  background-color: $yellow;
-  border-radius: 50%;
-  color: $black;
-  top: -0.5rem;
-  right: -0.3rem;
-  padding: 0.2rem;
-}
-
-
 
 ul {
   padding: 0;
@@ -52,6 +32,55 @@ button {
   align-items: center;
   justify-content: center;
 }
+.justify-sb {
+  display: flex;
+  justify-content: space-between;
+}
+.fw-600 {
+  font-weight: bold;
+}
+.my-20 {
+  margin: 20px 0px;
+}
+/*scroll bar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(24, 24, 24, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* -webkit-border-radius: 10px; */
+  background: white;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(24, 24, 24, 0.4);
+}
+
+//finix nav
+.my-grid {
+  width: 100%;
+}
+.counter-p {
+  position: relative;
+  display: none !important;
+}
+.counter {
+  position: absolute;
+  font-size: 0.44rem;
+  background-color: $yellow;
+  border-radius: 50%;
+  color: $black;
+  top: -0.5rem;
+  right: -0.3rem;
+  padding: 0.2rem;
+}
+
 //first section
 .sect1 {
   .productsCont {
@@ -83,19 +112,19 @@ button {
   border-radius: 50%;
   button {
     position: relative;
-    width: 40px;
-    height: 40px;
-    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
     margin: 0 auto;
     padding: 0;
     color: #fff;
     span {
       position: absolute;
-      right: -6px;
-      top: -3px;
-      width: 20px;
-      height: 20px;
-      background-color: $blue;
+      right: -8px;
+      top: -8px;
+      width: 16px;
+      height: 16px;
+      background-color: $yellow;
       border-radius: 50%;
       font-size: 12px;
       font-weight: 600;
@@ -104,7 +133,7 @@ button {
   }
 }
 .cartModal {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 100;
   top: 0px;
@@ -119,23 +148,24 @@ button {
     bottom: 0;
     width: 100%;
     height: 92vh;
-    background: $black;
-    color: $blue;
-    // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    background: $blue;
+    color: $black;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px,
+      rgba(209, 213, 219, 0.678) 0px 0px 0px 1px inset;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     .closeCartCont {
-      position: relative;
-      // top:0;
-      // z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       width: 100%;
       height: 40px;
-      background: $black;
+      background: $blue;
       .closeCart {
         position: absolute;
         cursor: pointer;
         right: 0;
-        top: 10px;
+        top: -15px;
         width: 20px;
         height: 20px;
         font-size: 22px;
@@ -144,44 +174,76 @@ button {
     }
   }
   .cartItemsCont {
+    height: 80%;
     position: relative;
+    overflow-y: scroll;
+
     > h2 {
       font-size: 32px;
     }
     .cartBody {
-      
+      display: flex;
+      position: relative;
+      .cartItems,
+      .summary {
+        background: white;
+        border-radius: 8px;
+      }
+      .cartItems {
+        width: 100%;
+        ul li {
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        }
+      }
+      .summary {
+        display: none;
+        width: 40%;
+        height: 300px;
+        position: sticky;
+        top: 0;
+      }
     }
   }
-  .cartItemsCont,
-  .cartFooter {
-    max-width: 996px;
-  }
+
   .cartFooterCont {
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 20px;
     padding: 0px 20px;
-    .totalCont {
-      .divider {
-        width: 100%;
-        height: 1px;
-        background-color: $grey;
-        margin: 10px 0px;
-      }
-      .total {
+    background-color: $blue;
+  }
+  .totalCont {
+    padding-top: 20px;
+    ul {
+      li {
       }
     }
-    .checkoutBtn {
-      margin-top: 20px;
-      background-color: $blue;
-      color: $black;
-      border-radius: 12px;
-      width: 100%;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: $grey;
+    margin: 10px 0px;
+  }
+  .total {
+    .totalAmt {
+      font-size: 18px;
       font-weight: bold;
-      // max-width: 600px;
-      padding: 10px;
     }
+  }
+  .checkoutBtn {
+    margin-top: 20px;
+    background-color: $black;
+    color: $blue;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    // max-width: 600px;
+    padding: 10px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
@@ -195,9 +257,27 @@ button {
   .roundedBtn {
     display: none;
   }
+  .counter-p {
+    position: relative;
+    display: inline-block !important;
+  }
   .cartModal {
     > div {
+      overflow-y: scroll;
     }
+  }
+  .cartBody {
+    min-height: 80% !important;
+    .cartItems {
+      margin-right: 20px;
+      min-height: 80%;
+    }
+    .summary {
+      display: flex !important;
+    }
+  }
+  .cartFooterCont {
+    display: none !important;
   }
 }
 

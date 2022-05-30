@@ -19,98 +19,121 @@
     <header class="bg-white">
         <nav class="container-lg d-flex justify-content-between pt-4 pb-3">
             <a href="">
-              <img src="http://cdn.onlinewebfonts.com/svg/img_258190.png" alt="" class="img-fluid" width="25px" height="25px">
+                <img src="http://cdn.onlinewebfonts.com/svg/img_258190.png" alt="" class="img-fluid" width="25px"
+                    height="25px">
             </a>
             <h3 class="brand-name">Prime-Fit</h3>
             <div class="nav-icon">
-                <i class="fa-solid fa-cart-shopping mx-2 counter-p"><p class="counter">0</p></i>
+                <i class="fa-solid fa-bag-shopping mx-2 counter-p" onclick="showCart()">
+                    <p class="counter " id="cartCount0"></p>
+                </i>
                 <i class="fa-solid fa-magnifying-glass mx-2 "></i>
             </div>
         </nav>
     </header>
     <main>
         <section class="container-lg sect1">
-            <div class="productsCont row">
-                <div class="col product">
+            <div class="productsCont row" id="productsCont">
+                <!-- <div class="col product">
                     Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
-                <div class="col product">
-                    Some content
-                </div>
+                </div> -->
+
             </div>
         </section>
-        <div class="roundedBtn" onclick="showCart()">
-            <button class="flex-center" id="cartBtnMobile">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="cartCount flex-center">
-                    10
-                </span>
-            </button>
-
-        </div>
         <div class="cartModal" id="cartModal">
             <div>
-                <div class="closeCartCont">
+                <div class="closeCartCont my-20">
                     <span class="closeCart" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="container-lg">
+                        <h2>Cart</h2>
+                    </div>
                 </div>
-                <div class="container-sm cartItemsCont">
-                    <h2>Cart</h2>
+                <div class="container-lg cartItemsCont">
                     <div class="cartBody">
+                        <div class="cartItems">
+                            <ul id="cartItemsUl">
+                                <!-- <li>
+                                    <div class="cartImgCont">
+                                        <img alt="productimg" />
+                                    </div>
+                                    <div>
+                                        <h6>Product Name</h6>
+                                        <p>Seller</p>
+                                    </div>
+                                    <div>
+                                        <p>97,000</p>
+                                        <span><i class="fa-solid fa-trash"></i></span>
+                                    </div>
 
+                                </li> -->
+
+                            </ul>
+                        </div>
+                        <div class="summary">
+                            <div class="cartFooter container-lg">
+                                <div class="totalCont">
+                                    <h4>Order Summary</h4>
+                                    <ul>
+                                        <li class="justify-sb">
+                                            <span>Delivery</span>
+                                            <span class="fw-600"> 1000</span>
+                                        </li>
+                                        <li class="justify-sb">
+                                            <span>Discount</span>
+                                            <span class="fw-600"> 500</span>
+                                        </li>
+
+                                    </ul>
+                                    <div class="divider"></div>
+                                    <div class="total justify-sb">
+                                        <span class="fw-600">Total</span>
+                                        <span class="totalAmt"> 144,423</span>
+                                    </div>
+                                </div>
+                                <button class="checkoutBtn">
+                                    CHECKOUT
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cartFooterCont">
-                    <div class="cartFooter container-sm">
+                    <div class="cartFooter container-lg">
                         <div class="totalCont">
                             <ul>
-                                <li>
+                                <li class="justify-sb">
                                     <span>Delivery</span>
-                                    <span class="totalAmt"> 1000</span>
+                                    <span class="fw-600"> 1000</span>
                                 </li>
-                                <li>
+                                <li class="justify-sb">
                                     <span>Discount</span>
-                                    <span class="totalAmt"> 500</span>
+                                    <span class="fw-600"> 500</span>
                                 </li>
-    
+
                             </ul>
                             <div class="divider"></div>
-                            <div class="total">
-                                <span>Total</span>
+                            <div class="total justify-sb">
+                                <span class="fw-600">Total</span>
                                 <span class="totalAmt"> 144,423</span>
                             </div>
                         </div>
                         <button class="checkoutBtn">
-                            CHECKOUT 
+                            CHECKOUT
                         </button>
                     </div>
-                    
+
                 </div>
 
             </div>
+        </div>
+        <div class="roundedBtn" onclick="showCart()">
+            <button class="flex-center" id="cartBtnMobile">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cartCount flex-center" id="cartCount1">
+                 
+                </span>
+            </button>
+
         </div>
     </main>
 
