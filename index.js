@@ -181,6 +181,14 @@ function removeFromCart(i) {
   cartItems.splice(i, 1);
   showCartItems();
 }
+
+//remove all
+function removeAll(){
+  var itemlength= cartItems.length
+  cartItems.splice(0,itemlength)
+
+}
+
 //cart modal
 function showCart() {
   const body = document.getElementById("body");
