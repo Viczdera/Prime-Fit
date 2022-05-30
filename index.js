@@ -16,24 +16,24 @@ const products = [
     image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/tomanniofficial_20220301_222623_0_360x.jpg?v=1646171575",
     name: 'Madussa',
     seller: "Amazon",
-    price: "30500",
-    dPrice: "40",
+    price: "3900",
+    dPrice: "4000",
   },
   {
     image:
       "https://i.pinimg.com/564x/f8/9f/41/f89f41a486e5def128e3f51183c1730a.jpg",
     name: "Lapel mens top",
     seller: "Amazon",
-    price: "30000",
-    dPrice: "40",
+    price: "3000",
+    dPrice: "4500",
   },
   {
     image:
       "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "5800",
+    dPrice: "7000",
   },
   {
     image:
@@ -45,51 +45,51 @@ const products = [
   },
   {
     image:
-      "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+      "https://cdn.shopify.com/s/files/1/0530/2907/7190/files/primeriesng_20220221_012954_0_360x.jpg?v=1645403552",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "15800",
+    dPrice: "20000",
   },
   {
     image:
       "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "4800",
+    dPrice: "7000",
   },
   {
     image:
       "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "6000",
+    dPrice: "6800",
   },
   {
     image:
       "https://i.pinimg.com/474x/58/08/1a/58081a370f9874cde1f64fb81054f08e.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "3000",
+    dPrice: "5700",
   },
   {
     image:
       "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "4900",
+    dPrice: "5000",
   },
   {
     image:
       "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
     name: "Nike MercurialX",
     seller: "Amazon",
-    price: "30.3",
-    dPrice: "40",
+    price: "1200",
+    dPrice: "3000",
   },
 ];
 
