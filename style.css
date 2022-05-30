@@ -28,6 +28,40 @@ body {
   padding: 0.2rem;
 }
 
+.all {
+  line-height: 12px;
+  font-size: 14px;
+  position: relative;
+}
+
+.all img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
+  width: 100%;
+}
+
+.all .discount {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #818383;
+}
+
+.all .cart-add {
+  border-radius: 0.3rem;
+  background-color: #ffd81b;
+  padding: 0.5rem;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.all .cart-add:hover {
+  background-color: #c7ab22;
+}
+
 ul {
   padding: 0;
 }
@@ -38,29 +72,45 @@ button {
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sect1 .productsCont {
   padding: 10px;
 }
+
 .sect1 .productsCont .product {
   width: 50%;
-  height: 150px;
   min-width: 150px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
   margin: 10px;
   border-radius: 8px;
-  box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
+  -webkit-box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
+          box-shadow: rgba(137, 148, 160, 0.445) 0px 8px 24px;
 }
+
 .sect1 .productsCont .product:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .roundedBtn {
@@ -71,6 +121,7 @@ button {
   background-color: #110e11;
   border-radius: 50%;
 }
+
 .roundedBtn button {
   position: relative;
   width: 40px;
@@ -80,6 +131,7 @@ button {
   padding: 0;
   color: #fff;
 }
+
 .roundedBtn button span {
   position: absolute;
   right: -6px;
@@ -94,6 +146,8 @@ button {
 }
 
 .cartModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   z-index: 100;
@@ -101,8 +155,9 @@ button {
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.662745098);
+  background: #ffffffa9;
 }
+
 .cartModal > div {
   position: fixed;
   padding: 20px;
@@ -115,12 +170,14 @@ button {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
+
 .cartModal > div .closeCartCont {
   position: relative;
   width: 100%;
   height: 40px;
   background: #110e11;
 }
+
 .cartModal > div .closeCartCont .closeCart {
   position: absolute;
   cursor: pointer;
@@ -131,16 +188,20 @@ button {
   font-size: 22px;
   font-weight: 600;
 }
+
 .cartModal .cartItemsCont {
   position: relative;
 }
+
 .cartModal .cartItemsCont > h2 {
   font-size: 32px;
 }
+
 .cartModal .cartItemsCont,
 .cartModal .cartFooter {
   max-width: 996px;
 }
+
 .cartModal .cartFooterCont {
   position: absolute;
   width: 100%;
@@ -148,12 +209,14 @@ button {
   bottom: 20px;
   padding: 0px 20px;
 }
+
 .cartModal .cartFooterCont .totalCont .divider {
   width: 100%;
   height: 1px;
   background-color: #818383;
   margin: 10px 0px;
 }
+
 .cartModal .cartFooterCont .checkoutBtn {
   margin-top: 20px;
   background-color: #eff2fc;
@@ -171,11 +234,13 @@ button {
     max-width: calc(33.3% - 20px) !important;
   }
 }
+
 @media (min-width: 768px) {
   .roundedBtn {
     display: none;
   }
 }
+
 @media only screen and (min-width: 992px) {
   .product {
     width: 25% !important;
@@ -183,5 +248,4 @@ button {
     max-width: calc(25% - 20px) !important;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
