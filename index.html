@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/114f48210b.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
+<body id="body">
 
     <header class="bg-white">
         <nav class="container-lg d-flex justify-content-between pt-4 pb-3">
@@ -27,11 +28,100 @@
             </div>
         </nav>
     </header>
-    <main class="container-lg">
-      <section>
-        
-      </section>
-  </main>
+    <main>
+        <section class="container-lg sect1">
+            <div class="productsCont row myProduct">
+                <!-- <div class="col product myProduct">
+                  <div class="all">
+                    <img src="https://i.pinimg.com/564x/f8/9f/41/f89f41a486e5def128e3f51183c1730a.jpg" alt="" height="100px" width="100%" style="object-fit:contain ;">
+                    <div class="img-info">
+                     <h5>Nike MercurialX</h5>
+                     <h6>Amazon</h6>
+                     <h6>$29.8</h6>
+                     <h6 class="discount">$40.0</h6>
+                    </div>
+                    <button class="cart-add">Add to cart</button> -->
+                  <!-- </div> -->
+                <!-- </div>
+                <div class="col product  ">
+                    Some c
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div>
+                <div class="col product">
+                    Some content
+                </div> -->
+            </div>
+        </section>
+        <div class="roundedBtn" onclick="showCart()">
+            <button class="flex-center" id="cartBtnMobile">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cartCount flex-center">
+                    10
+                </span>
+            </button>
+
+        </div>
+        <div class="cartModal" id="cartModal">
+            <div>
+                <div class="closeCartCont">
+                    <span class="closeCart" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="container-sm cartItemsCont">
+                    <h2>Cart</h2>
+                    <div class="cartBody">
+
+                    </div>
+                </div>
+                <div class="cartFooterCont">
+                    <div class="cartFooter container-sm">
+                        <div class="totalCont">
+                            <ul>
+                                <li>
+                                    <span>Delivery</span>
+                                    <span class="totalAmt"> 1000</span>
+                                </li>
+                                <li>
+                                    <span>Discount</span>
+                                    <span class="totalAmt"> 500</span>
+                                </li>
+    
+                            </ul>
+                            <div class="divider"></div>
+                            <div class="total">
+                                <span>Total</span>
+                                <span class="totalAmt"> 144,423</span>
+                            </div>
+                        </div>
+                        <button class="checkoutBtn">
+                            CHECKOUT 
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </main>
 
 
     <script src="./index.js"></script>
