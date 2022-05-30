@@ -6,8 +6,8 @@ const myProduct = document.querySelector(".myProduct")
 //array of products
 const products = [
   {
-    image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
-    name: 'Nike MercurialX',
+    image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/products/tomanniofficial_20220301_222623_0_360x.jpg?v=1646171575",
+    name: 'Madussa',
     seller: "Amazon",
     price: '$30.3',
     dPrice: "$40"
@@ -40,16 +40,16 @@ const products = [
   price: '$30.3',
   dPrice: "$40"
 },
-{ image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
+{ image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/files/manacquiredknowledge_20220221_122138_0_360x.jpg?v=1645442644",
 name: 'Nike MercurialX',
 seller: "Amazon",
 price: '$30.3',
 dPrice: "$40"
 },
 {
-  image: "https://i.pinimg.com/564x/2b/d6/90/2bd6908e4297a265982e1ca65055e7dd.jpg",
-  name: 'Nike MercurialX',
-  seller: "Amazon",
+  image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/files/primeriesng_20220221_012954_0_360x.jpg?v=1645403552",
+  name: 'Crucifix Denim',
+  seller: "MAK - OFFICIAL",
   price: '$30.3',
   dPrice: "$40"
 },
@@ -68,9 +68,9 @@ dPrice: "$40"
   dPrice: "$40"
 },
 {
-  image: "https://i.pinimg.com/564x/5a/e0/d2/5ae0d2251578f453d5e0e7ceb19cd07e.jpg",
-  name: 'Nike MercurialX',
-  seller: "Amazon",
+  image: "https://cdn.shopify.com/s/files/1/0530/2907/7190/files/manacquiredknowledge_20220221_122138_0_360x.jpg?v=1645442644",
+  name: 'JUDAS KISS',
+  seller: "LONERS PARTY",
   price: '$30.3',
   dPrice: "$40"
 },
@@ -79,7 +79,7 @@ dPrice: "$40"
 window.onload = () =>{
 
    products.map(function(product, i){
-    myProduct.innerHTML += ` <div class="col product myProduct"><div class="all"><img src="${product.image}" alt="" height="150px" width="100%" style="object-fit:contain ;"> <div class="img-info"> <h5>${product.name}</h5> <h6>${product.price}</h6><h6 class="discount">${product.dPrice}</h6> </div> <button class="cart-add" onclick=addToCart(${i})>Add to cart</button></div></div>`
+    myProduct.innerHTML += ` <div class="col product myProduct"><div class="all"><img src="${product.image}" alt="" height="150px" width="100%" style="object-fit:contain ;"> <div class="img-info"> <h5>${product.name}</h5><h6>${product.seller}</h6> <h6>${product.price}</h6><h6 class="discount">${product.dPrice}</h6> </div> <button class="cart-add" onclick=addToCart(${i})>Add to cart</button></div></div>`
   })
  
 }
@@ -150,6 +150,8 @@ function removeFromCart(i) {
   cartItems.splice(i, 1);
   showCartItems();
 }
+
+
 //cart modal
 function showCart() {
   const body = document.getElementById("body");
@@ -160,3 +162,17 @@ function closeCart() {
   cartModal.style.display = "none";
   body.style.overflowY = "scroll";
 }
+// clear cart item
+let clearItem = document.querySelector(".clear-list")
+clearItem.addEventListener("click",removeAll)
+let secondclearitem = document.getElementById("clear-list")
+secondclearitem.addEventListener("click",removeAll)
+ 
+function removeAll(){
+  var itemlength= cartItems.length
+  cartItems.splice(0,itemlength)
+  cartCount0.innerText = 0;
+  cartCount1.innerText = 0;
+  cartItemsContainer.innerHTML = ""
+}
+

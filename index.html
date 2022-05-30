@@ -27,7 +27,7 @@
                 <i class="fa-solid fa-bag-shopping mx-2 counter-p" onclick="showCart()">
                     <p class="counter " id="cartCount0"></p>
                 </i>
-                <i class="fa-solid fa-magnifying-glass mx-2 "></i>
+                <i class="fa-solid fa-magnifying-glass mx-2  "id='counter-p'></i>
             </div>
         </nav>
     </header>
@@ -51,7 +51,7 @@
                     <div class="cartBody">
                         <div class="cartItems">
                             <ul id="cartItemsUl">
-                                <!-- <li>
+                                <li>
                                     <div class="cartImgCont">
                                         <img alt="productimg" scr="./for.jpg" />
                                     </div> 
@@ -60,12 +60,13 @@
                                         <p>Seller</p>
                                     </div>
                                     <div>
-                                        <p>97,000</p>
+                                        <p >97,000</p>
                                         <span><i class="fa-solid fa-trash"></i></span>
                                     </div>
 
-                                </li>  -->
+                                </li> 
                             </ul>
+                           
                         </div>
                         <div class="summary">
                             <div class="cartFooter container-lg">
@@ -91,6 +92,7 @@
                                 <button class="checkoutBtn">
                                     CHECKOUT
                                 </button>
+                                <button class="clear-list">clear item</button>
                             </div>
                         </div>
                     </div>
@@ -118,6 +120,7 @@
                         <button class="checkoutBtn">
                             CHECKOUT
                         </button>
+                        <button class="clear-list" id="clear-list" >clear item</button>
                     </div>
 
                 </div>
