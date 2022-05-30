@@ -108,7 +108,7 @@ const productContainer = document.getElementById("productsCont");
 const cartItemsContainer = document.getElementById("cartItemsUl");
 //array of products
 
-const cartItems = [];
+const cartItems =JSON.parse(localStorage.getItem("cart")) || [];
 console.log(products);
 
 showCartItems();
@@ -148,7 +148,7 @@ function showCartItems() {
     cartCount0.innerText = cartItems.length;
     cartCount1.innerText = cartItems.length;
   }
-
+  window.localStorage.setItem('cart',JSON.stringify(cartItems))
   getCartTotal();
 }
 //
